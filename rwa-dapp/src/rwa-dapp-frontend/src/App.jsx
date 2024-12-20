@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { rwa_listing_backend } from 'declarations/rwa_listing_backend';
+import { rwa_dapp_backend } from 'declarations/rwa-dapp-backend';
 
 function App() {
   const [greeting, setGreeting] = useState('');
@@ -7,7 +7,7 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     const name = event.target.elements.name.value;
-    rwa_listing_backend.greet(name).then((greeting) => {
+    rwa_dapp_backend.greet(name).then((greeting) => {
       setGreeting(greeting);
     });
     return false;

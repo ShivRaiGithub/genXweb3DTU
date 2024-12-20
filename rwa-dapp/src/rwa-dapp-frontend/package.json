@@ -1,10 +1,10 @@
 {
-  "name": "rwa_listing_frontend",
+  "name": "rwa-dapp-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "setup": "npm i && dfx canister create rwa_listing_backend && dfx generate rwa_listing_backend && dfx deploy",
+    "setup": "npm i && dfx canister create rwa-dapp-backend && dfx generate rwa-dapp-backend && dfx deploy",
     "start": "vite --port 3000",
     "prebuild": "dfx generate",
     "build": "tsc && vite build",

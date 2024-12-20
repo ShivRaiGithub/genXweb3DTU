@@ -11,32 +11,19 @@
       "type": "custom",
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
     },
-    "rwa_listing_backend": {
-      "build": "npx azle rwa_listing_backend",
-      "candid": "src/rwa_listing_backend/rwa_listing_backend.did",
-      "gzip": true,
-      "main": "src/rwa_listing_backend/src/index.ts",
-      "tech_stack": {
-        "cdk": {
-          "azle": {}
-        },
-        "language": {
-          "javascript": {},
-          "typescript": {}
-        }
-      },
-      "type": "custom",
-      "wasm": ".azle/rwa_listing_backend/rwa_listing_backend.wasm"
+    "rwa-dapp-backend": {
+      "main": "src/rwa-dapp-backend/main.mo",
+      "type": "motoko"
     },
-    "rwa_listing_frontend": {
+    "rwa-dapp-frontend": {
       "dependencies": [
-        "rwa_listing_backend"
+        "rwa-dapp-backend"
       ],
       "source": [
-        "src/rwa_listing_frontend/dist"
+        "src/rwa-dapp-frontend/dist"
       ],
       "type": "assets",
-      "workspace": "rwa_listing_frontend"
+      "workspace": "rwa-dapp-frontend"
     }
   },
   "defaults": {
